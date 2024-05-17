@@ -3,9 +3,9 @@ import logo from '/logo.png'
 const Nav = () => {
   return (
     <nav className="w-full flex justify-between items-center py-6 sm:px-14 xs:px-6 px-2    z-20">
-         <div className="flex justify-start items-center nav-img ">
+         <a href='' className="flex justify-start items-center nav-img ">
             <img className='md:w-full w-[140px]' src={logo} alt="" />
-        </div>
+        </a>
         <div className="flex items-center justify-between lg:gap-32 gap-20">
             <div className="hidden md:block">
                 <div className="flex gap-14 items-center justify-center">

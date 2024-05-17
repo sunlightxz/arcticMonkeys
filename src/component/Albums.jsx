@@ -1,4 +1,5 @@
-import React from 'react'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import album2 from '/albumx2.png'
 import album from '/albumx1.png'
 import album3 from '/albumx3.png'
@@ -6,12 +7,17 @@ import spoti from '/spotify.png'
 import itunes from '/itunes.png'
 
 const Albums = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.5, // Trigger the animation when the component is 50% in view
+    triggerOnce: true, // Trigger the animation only once
+  });
+
   return (
     <div className='bg-[#131211] py-[100px] lg:px-[80px] md:px-[60px] px-[20px]'>
-        <div className="flex flex-col justify-center items-center ">
-          <h3 className='text-[#CFB8B8] text-xl font-medium'>FEATURED</h3>
-          <h1 className='text-white text-[34px] font-semibold'>NEW RELEASE</h1>
-          <p className='px-10 pt-2 text-center text-base text-gray-400 font-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolor quia molestiae culpa <br/> vitae minus necessitatibus aliquid sequi! Molestiae, quo.</p>
+        <div ref={ref} className="flex flex-col justify-center items-center ">
+          <motion.h3 className='text-[#CFB8B8] text-xl font-medium' initial={{ opacity: 0, y: 20 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}>FEATURED</motion.h3>
+          <motion.h1 className='text-white text-[34px] font-semibold' initial={{ opacity: 0, y: 20 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}>NEW RELEASE</motion.h1>
+          <motion.p className='px-10 pt-2 text-center text-base text-gray-400 font-light' initial={{ opacity: 0, y: 20 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolor quia molestiae culpa <br/> vitae minus necessitatibus aliquid sequi! Molestiae, quo.</motion.p>
 
           <div className="flex pt-[60px] justify-between ">
             <a className="flex justify-center items-center flex-col gap-2">
@@ -53,4 +59,4 @@ const Albums = () => {
   )
 }
 
-export default Albums
+export default Albums;
