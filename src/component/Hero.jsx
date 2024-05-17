@@ -30,16 +30,16 @@ const Hero = () => {
     setIsPlaying(prevState => !prevState);
   };
   return (
-    <div className="h-screen w-full relative">
+    <div className="sm:h-screen h-[70vh] w-full relative">
     <img src={hero} className="sm:h-full h-[90%] w-full absolute bg-cover inset-0 z-10" alt="" />
     <div className="flex justify-center items-center flex-col h-full">
       <motion.div className="z-20 flex justify-center flex-col items-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}>
-       <h1 className='lg:text-[128px] md:text-[100px] sm:text-[70px] xsm:text-[60px] text-[50px] mb-0 font-bold text-white'>Welcome to</h1>
-              <h1 className='lg:text-[128px] md:text-[100px] sm:text-[70px] xsm:text-[60px] text-[50px] font-bold text-white'>Arctic Monkeys </h1>
-              <p className='md:text-xl text-base font-medium  mb-3'>Experience the cool vibes of Arctic Monkeys music.</p>
+       <h1 className='lg:text-[128px] md:text-[100px] sm:text-[70px] xsm:text-[60px] text-[40px] mb-0 font-bold text-white'>Welcome to</h1>
+              <h1 className='lg:text-[128px] md:text-[100px] sm:text-[70px] xsm:text-[60px] text-[40px] font-bold text-white'>Arctic Monkeys </h1>
+              <p className='md:text-xl xsm:text-base text-sm font-medium  mb-3'>Experience the cool vibes of Arctic Monkeys music.</p>
               <a href='https://arcticmonkeys.ffm.to/thecar' className='md:py-[18px] py-[15px] px-[30px] md:px-[50px] mt-8 border border-[#CFB8B8] text-[#CFB8B8] hover:text-white] rounded-sm text-lg relative hover:bg-[#131211] duration-500 ease-in-out'>Buy & Listen <span className='absolute w-[50px] h-[1px] -right-[1.5rem] top-[50%] bg-white'></span></a>
       </motion.div>
 

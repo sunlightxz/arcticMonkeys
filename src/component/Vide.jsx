@@ -58,9 +58,9 @@ const Vide = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
              
-            transition={{ duration: 0.5,}} href='https://arcticmonkeys.ffm.to/thecar' className='md:py-[18px] py-[15px] px-[30px] md:px-[50px] mt-8 border border-[#CFB8B8] text-[#CFB8B8] hover:text-white] rounded-sm text-lg relative hover:bg-[#131211] duration-500 ease-in-out'>
+            transition={{ duration: 0.5,}} href='https://arcticmonkeys.ffm.to/thecar' className='md:py-[18px] py-[10px] px-[22px]  md:px-[50px] mt-8 border border-[#CFB8B8] text-[#CFB8B8] hover:text-white] rounded-sm text-lg relative hover:bg-[#131211] duration-500 ease-in-out'>
               Buy & Listen 
-              <span className='absolute w-[50px] h-[1px] -right-[1.5rem] top-[50%] bg-white'>
+              <span className='absolute w-[30px] h-[1px] -right-[1rem] top-[50%] bg-white'>
               </span>
               </motion.a>
 
